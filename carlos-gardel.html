@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Carlos Gardel</title>
+
+  <!-- 1) Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- 3) Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- 4) Script de carga de parciales y menú -->
+  <script defer src="js/menu.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-1 p-4 space-y-8">
+
+    <!-- Datos Personales -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Datos Personales</h2>
+      <img src="https://i0.wp.com/carasycaretas.org.ar/wp-content/uploads/2020/12/Gardel.jpg?fit=1200%2C672&ssl=1"
+           alt="Carlos Gardel" class="w-32 h-32 mx-auto rounded-full object-cover mb-4"/>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li><strong>Nombre completo:</strong> Carlos Gardel (Charles Romuald Gardes)</li>
+        <li><strong>Fecha de nacimiento:</strong> 11 de diciembre de 1890</li>
+        <li><strong>Lugar de nacimiento:</strong> Toulouse, Francia</li>
+        <li><strong>Fecha de fallecimiento:</strong> 24 de junio de 1935</li>
+        <li><strong>Lugar de fallecimiento:</strong> Medellín, Colombia</li>
+        <li><strong>Estilos musicales:</strong> Tango · Milonga · Canción Criolla</li>
+      </ul>
+    </section>
+
+    <!-- Biografía breve -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-3">Biografía breve</h2>
+      <p class="text-gray-700">
+        Carlos Gardel es la figura más emblemática del tango. Su voz, carisma y capacidad para interpretar y componer hicieron que el tango alcanzara proyección internacional. Vivió gran parte de su vida en Buenos Aires y es considerado un icono cultural tanto en Argentina como en Uruguay y Francia.
+      </p>
+      <a href="https://es.wikipedia.org/wiki/Carlos_Gardel" target="_blank" class="text-yellow-600 underline mt-2 inline-block">Ver biografía completa</a>
+    </section>
+
+    <!-- Galería con scroll-snap sin scrollbar -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Galería</h2>
+      <div class="overflow-x-auto snap-x snap-mandatory flex space-x-4 pb-4 no-scrollbar">
+        <img src="https://fundacioncarlosgardel.org/wp-content/uploads/05.jpg" alt="Gardel 1" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://www.clarin.com/img/2020/11/13/7sWkXdCWj_1256x620__1.jpg" alt="Gardel 2" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://diariotiempo.com.uy/noticias/wp-content/uploads/2022/06/Gardel-1933.jpg" alt="Gardel 3" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/vanguardiaeluniversal/VZWWPXMNUZGF7BOVIA2426BLEA.jpg" alt="Gardel 4" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+      </div>
+    </section>
+
+    <!-- Videos y Audios -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Videos y Audios</h2>
+      <hr class="border-gray-300 mb-4"/>
+      <ul class="list-none space-y-3 text-gray-800">
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=NU5Tzq3kGZw" target="_blank" class="hover:underline">El día que me quieras</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=GpM2ayxR5Hc" target="_blank" class="hover:underline">Mi Buenos Aires querido</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=wt_tuTR3RXA" target="_blank" class="hover:underline">Volver</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=0vLzVvQK6MI" target="_blank" class="hover:underline">Por una cabeza</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2v16a2 2 0 01-2 2H4v-2h8V4h-6V2h6z"/><path d="M18 2h2v20h-2z"/></svg>
+          <a href="https://open.spotify.com/artist/5NqxWvKBfn3Uae3lHkz2eK" target="_blank" class="hover:underline">Playlist en Spotify: Carlos Gardel</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Puntos Geográficos Relevantes -->
+    <section class="bg-white p-6 rounded-lg shadow space-y-4">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Puntos Geográficos Relevantes</h2>
+      <hr class="border-blue-300 mb-4"/>
+      <div class="space-y-4">
+        <!-- ... tus tarjetas de puntos geográficos ... -->
+      </div>
+    </section>
+
+    <!-- Síntesis histórica / anécdotas -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Síntesis histórica / anécdotas</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>“Gardel cada día canta mejor” se popularizó tras su muerte.</li>
+        <li>Pionero en llevar el tango al cine en los años 30.</li>
+        <li>Se naturalizó argentino en 1923.</li>
+        <li>La Casa Museo conserva muebles y recuerdos personales.</li>
+      </ul>
+    </section>
+
+    <!-- Curaduría -->
+    <section class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Curaduría</h2>
+      <p class="text-gray-700">Los contenidos fueron seleccionados y revisados por el Collegium Musicum junto con Ricardo, ofreciendo una visión detallada de la vida y obra de Carlos Gardel.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

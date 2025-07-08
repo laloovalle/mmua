@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Mapa Interactivo</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Carga de header/footer y menú -->
+  <script defer src="js/menu.js"></script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { flex: 1; }
+  </style>
+</head>
+<body class="flex flex-col h-screen bg-gray-100">
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <!-- Filtros por género -->
+  <div class="px-4 py-2 overflow-x-auto flex space-x-2 bg-white border-b">
+    <button data-filter="all" class="px-4 py-2 rounded-full bg-indigo-900 text-white">Todos</button>
+    <button data-filter="Tango" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Tango</button>
+    <button data-filter="Rock" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Rock</button>
+    <button data-filter="Folclore" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Folclore</button>
+    <button data-filter="Clásica" class="px-4 py-2 rounded-full bg-gray-200 text-gray-700">Clásica</button>
+  </div>
+
+  <!-- Mapa -->
+  <div id="map"></div>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([-34.60199, -58.36892], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+    const locations = [
+      // Tango
+      { lat: -34.6056, lng: -58.4141, title: 'Museo Casa Carlos Gardel', category: 'Tango' },
+      { lat: -34.6059, lng: -58.4128, title: 'Monumento a Carlos Gardel', category: 'Tango' },
+      { lat: -34.6028, lng: -58.4059, title: 'O’Rondeman', category: 'Tango' },
+      { lat: -34.6049, lng: -58.4128, title: 'Bar Los Andes', category: 'Tango' },
+      { lat: -34.6045, lng: -58.3831, title: 'Teatro Ópera', category: 'Tango' },
+
+      // Rock
+      { lat: -34.5533, lng: -58.4405, title: 'Estadio Obras Sanitarias', category: 'Rock' },
+      { lat: -34.5885, lng: -58.4134, title: 'Coronel Díaz y Santa Fe', category: 'Rock' },
+      { lat: -34.6019915, lng: -58.3689178, title: 'Estadio Luna Park', category: 'Rock', author: 'Charly García', address: 'Av. Madero 420' },
+      { lat: -34.5954, lng: -58.4335, title: 'Estudios ION', category: 'Rock' },
+      { lat: -34.5934, lng: -58.4381, title: 'Dream Factory', category: 'Rock' },
+
+      // Folclore
+      { lat: -34.6072, lng: -58.3725, title: 'Radio Nacional (Maipú 555)', category: 'Folclore' },
+      { lat: -34.6194, lng: -58.3736, title: 'Vivienda de Jaime Torres', category: 'Folclore' },
+      { lat: -34.6000, lng: -58.3600, title: 'Casa del Tantanakuy', category: 'Folclore' },
+
+      // Clásica
+      { lat: -34.6081, lng: -58.3736, title: 'Manzana de las Luces', category: 'Clásica' }
+    ];
+
+    const markers = [];
+    locations.forEach(loc => {
+      let popup = `<strong>${loc.title}</strong><br>`;
+      if (loc.author) popup += `<em>${loc.author}</em><br>`;
+      popup += `<em>${loc.category}</em>`;
+      if (loc.address) popup += `<br><small>${loc.address}</small>`;
+      const m = L.marker([loc.lat, loc.lng]).bindPopup(popup);
+      m.category = loc.category;
+      markers.push(m);
+      m.addTo(map);
+    });
+
+    document.querySelectorAll('[data-filter]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('[data-filter]').forEach(b => {
+          b.classList.remove('bg-indigo-900','text-white');
+          b.classList.add('bg-gray-200','text-gray-700');
+        });
+        btn.classList.add('bg-indigo-900','text-white');
+        btn.classList.remove('bg-gray-200','text-gray-700');
+        markers.forEach(m => {
+          if (filter === 'all' || m.category === filter) {
+            m.addTo(map);
+          } else {
+            map.removeLayer(m);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Domenico Zipoli</title>
+
+  <!-- 1) Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- 3) Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- 4) Script de carga de parciales y menú -->
+  <script defer src="js/menu.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-1 p-4 space-y-6">
+
+    <!-- Datos Personales -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Datos Personales</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li><strong>Nombre:</strong> Domenico Zipoli</li>
+        <li><strong>Nacimiento:</strong> 1688, Prato (Italia)</li>
+        <li><strong>Fallecimiento:</strong> 1726, Córdoba (Argentina)</li>
+        <li><strong>Estilo:</strong> Barroco</li>
+      </ul>
+    </section>
+
+    <!-- Biografía breve -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-3">Biografía breve</h2>
+      <p class="text-gray-700">
+        Compositor y organista italiano del período barroco, Domenico Zipoli se integró a las misiones jesuíticas en Sudamérica, donde adaptó su arte para hacerlo accesible a las comunidades indígenas. Compuso numerosas obras corales y orquestales que enseñaba y dirigía en las reducciones. 
+      </p>
+      <a href="https://es.wikipedia.org/wiki/Domenico_Zipoli" target="_blank" class="text-yellow-600 underline mt-2 inline-block">Ver biografía completa</a>
+    </section>
+
+    <!-- Galería -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Galería</h2>
+      <div class="overflow-x-auto snap-x snap-mandatory flex space-x-4 pb-4 no-scrollbar">
+        <img src="https://picsum.photos/seed/zipoli1/300/200" alt="Zipoli 1" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/zipoli2/300/200" alt="Zipoli 2" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/zipoli3/300/200" alt="Zipoli 3" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/zipoli4/300/200" alt="Zipoli 4" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+      </div>
+    </section>
+
+    <!-- Videos y Audios -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Videos y Audios</h2>
+      <hr class="border-gray-300 mb-4"/>
+      <ul class="list-none space-y-3 text-gray-800">
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" class="hover:underline">Ópera “San Ignacio” – Música Barroca en Misiones Jesuitas</a>
+        </li>
+        <li class="flex items-center">
+          <span class="text-green-500 text-xl mr-2">🎵</span>
+          <a href="https://music.amazon.com/artists/B000QJKDTS/domenico-zipoli" target="_blank" class="hover:underline">Domenico Zipoli en Amazon Music</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Puntos Geográficos Relevantes -->
+    <section class="bg-white p-6 rounded-lg shadow space-y-4">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Puntos Geográficos Relevantes</h2>
+      <hr class="border-blue-300 mb-4"/>
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-2 mb-1">
+            <svg class="h-5 w-5 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+            </svg>
+            <h3 class="text-lg font-semibold text-blue-600">Manzana de las Luces</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-1">Monserrat, Ciudad de Buenos Aires</p>
+          <p class="text-gray-700 leading-relaxed mb-2">
+            Conjunto histórico y cultural que data del siglo XVII, epicentro de la educación y religión jesuítica.  
+            <strong>Obra destacada:</strong> Ópera “San Ignacio de Loyola”, fusión barroca europea y elementos locales para las misiones.
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Manzana+de+las+Luces,+Buenos+Aires" target="_blank"
+             class="text-yellow-600 underline hover:text-yellow-700">Ver en Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntesis histórica -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Síntesis histórica</h2>
+      <p class="text-gray-700 mb-3">
+        La Manzana de las Luces, en Monserrat, es un sitio clave de la Buenos Aires colonial: colegios, iglesias y túneles subterráneos formaban parte del centro intelectual y religioso.
+      </p>
+      <p class="text-gray-700">
+        La ópera “San Ignacio de Loyola”, atribuida a Zipoli y colegas, combinaba la tradición barroca europea con ritmos y escenarios locales para educar y evangelizar en las reducciones jesuíticas.
+      </p>
+    </section>
+
+    <!-- Sección Especial: La Ópera de San Ignacio de Loyola -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">La Ópera de San Ignacio de Loyola</h2>
+      <div class="space-y-4">
+        <!-- La obra -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">La obra</h3>
+          <p class="text-gray-700 leading-relaxed">
+            La Ópera de San Ignacio de Loyola es una obra musical que se atribuye a Domenico Zipoli y a sus colegas jesuitas de las misiones, creada para las reducciones jesuíticas en América del Sur, específicamente en el área de los guaraníes (actuales Argentina, Paraguay y Bolivia). 
+            Esta obra es especialmente interesante porque combina elementos de la ópera barroca europea con influencias culturales locales, y se empleaba en las misiones para transmitir enseñanzas religiosas y valores cristianos.
+          </p>
+        </div>
+        <!-- Argumento de la Ópera -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Argumento de la Ópera</h3>
+          <p class="text-gray-700 leading-relaxed">
+            La Ópera de San Ignacio de Loyola relata la vida y la obra de San Ignacio, el fundador de la Compañía de Jesús, y está concebida como una narración épica de sus momentos clave de conversión y sus esfuerzos por difundir la fe cristiana. 
+            La historia se centra en la transformación espiritual de Ignacio, sus luchas internas, su renuncia a una vida de gloria militar y su dedicación completa a la vida religiosa y al servicio de Dios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curaduría -->
+    <section class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Curaduría</h2>
+      <p class="text-gray-700">
+        Los contenidos fueron seleccionados por Ricardo Grätzer y revisados por el Collegium Musicum de Buenos Aires.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

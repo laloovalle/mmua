@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Recorridos Temáticos</title>
+
+  <!-- 1) Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- 3) Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- 4) Script de carga de parciales y menú -->
+  <script defer src="js/menu.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-1 p-6 space-y-6">
+    <h2 class="text-3xl font-bold text-indigo-900 text-center">Recorridos Temáticos</h2>
+    <div class="space-y-4">
+
+      <!-- Recorrido del Tango -->
+      <a href="recorrido-tango.html" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Recorrido del Tango</h3>
+          <p class="text-gray-600 text-sm">Sumergite en el origen y evolución del tango por las calles de Buenos Aires.</p>
+        </div>
+        <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <!-- Recorrido del Rock -->
+      <a href="recorrido-rock.html" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Recorrido del Rock</h3>
+          <p class="text-gray-600 text-sm">Segu&iacute; las huellas de los pioneros del rock nacional en puntos emblem&aacute;ticos.</p>
+        </div>
+        <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <!-- Recorrido del Jazz -->
+      <a href="recorrido-jazz.html" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Recorrido del Jazz</h3>
+          <p class="text-gray-600 text-sm">Descubr&iacute; los clubes y rincones donde el jazz floreci&oacute; en Buenos Aires.</p>
+        </div>
+        <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+
+      <!-- Recorrido del Blues -->
+      <a href="recorrido-blues.html" class="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Recorrido del Blues</h3>
+          <p class="text-gray-600 text-sm">Viv&iacute; el esp&iacute;ritu del blues porte&ntilde;o en salas y bares hist&oacute;ricos.</p>
+        </div>
+        <svg class="h-6 w-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

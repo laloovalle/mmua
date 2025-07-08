@@ -1,0 +1,19 @@
+body { font-family: 'Open Sans', sans-serif; }
+h1,h2,h3 { font-family: 'Merriweather', serif; }
+/* Oculta scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Patrón muy suave de calles en gris claro */
+.bg-map-patron {
+  background-color: #f7fafc; /* gris clarito */
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 20px);
+}
+Con eso tendrás

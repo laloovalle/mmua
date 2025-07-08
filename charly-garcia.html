@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Charly García</title>
+
+  <!-- 1) Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- 3) Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- 4) Script de carga de parciales y menú -->
+  <script defer src="js/menu.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-1 p-4 space-y-6">
+
+    <!-- Datos Personales -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Datos Personales</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li><strong>Nombre completo:</strong> Charly García (Carlos Alberto García Moreno)</li>
+        <li><strong>Fecha de nacimiento:</strong> 23 de octubre de 1951</li>
+        <li><strong>Lugar de nacimiento:</strong> Buenos Aires, Argentina</li>
+        <li><strong>Estilos musicales:</strong> Rock · Rock Progresivo · Folk · Pop · New Wave</li>
+      </ul>
+    </section>
+
+    <!-- Biografía breve -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-3">Biografía breve</h2>
+      <p class="text-gray-700">
+        Apodado “el padre del Rock Argentino”, Charly revolucionó la música desde los ’70 con Sui Generis, Serú Girán y su carrera solista. Su obra, llena de experimentación y profundidad poética, marcó generaciones.
+      </p>
+      <a href="https://es.wikipedia.org/wiki/Charly_Garc%C3%ADa" target="_blank" class="text-yellow-600 underline mt-2 inline-block">Ver biografía completa</a>
+    </section>
+
+    <!-- Galería sin scrollbar -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Galería</h2>
+      <div class="overflow-x-auto snap-x snap-mandatory flex space-x-4 pb-4 no-scrollbar">
+        <img src="https://picsum.photos/seed/charly1/300/200" alt="Charly 1" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/charly2/300/200" alt="Charly 2" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/charly3/300/200" alt="Charly 3" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/charly4/300/200" alt="Charly 4" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+      </div>
+    </section>
+
+    <!-- Videos y Audios -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Videos y Audios</h2>
+      <hr class="border-gray-300 mb-4"/>
+      <ul class="list-none space-y-3 text-gray-800">
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=Rasgu%C3%B1aLasPiedras" target="_blank" class="hover:underline">Rasguña las Piedras</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=Seminare" target="_blank" class="hover:underline">Seminare</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=NosSiguenPegandoAbajo" target="_blank" class="hover:underline">Nos Siguen Pegando Abajo</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=DemoliendoHoteles" target="_blank" class="hover:underline">Demoliendo Hoteles</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=LosDinosaurios" target="_blank" class="hover:underline">Los Dinosaurios</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2v16a2 2 0 01-2 2H4v-2h8V4h-6V2h6z"/><path d="M18 2h2v20h-2z"/></svg>
+          <a href="https://open.spotify.com/artist/CharlyGarcia" target="_blank" class="hover:underline">Playlist en Spotify: Charly García</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Puntos Geográficos Relevantes -->
+    <section class="bg-white p-6 rounded-lg shadow space-y-4">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Puntos Geográficos Relevantes</h2>
+      <hr class="border-blue-300 mb-4"/>
+      <div class="space-y-4">
+        <!-- Tarjetas de puntos geográficos aquí -->
+        <!-- Casa familiar, Conservatorio, etc. -->
+      </div>
+    </section>
+
+    <!-- Síntesis histórica / anécdotas -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Síntesis histórica / anécdotas</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Frases de sus canciones que hoy usamos cotidianamente: “cada cual tiene un trip en el bocho”, “no elegí este mundo pero aprendí a querer”, “porque no te animas a despegar”, “Mi capricho es ley”, “Maradona es el 10, yo soy el 9”, “Si alguien me dice que no le gustan Los Beatles ya no confío tanto en él”, “El éxito es lo que te pasa después de un montón de piñas”, “Say no more”.</li>
+        <li>Fue precursor en los crossover de géneros (grabó con Mercedes Sosa y mezcló rock con tango).</li>
+        <li>En 1995 dio su mítico concierto para MTV en Miami.</li>
+        <li>En uno de sus momentos más polémicos saltó desde un 9º piso a la piscina del Hotel Aconcagua en Mendoza.</li>
+        <li>Llenó estadios como River, Boca, Ferro, Obras, Luna Park y un sinfín de teatros además de su show en la 9 de Julio.</li>
+      </ul>
+    </section>
+
+    <!-- Observaciones -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Observaciones</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>Charly tuvo una relación estrecha con Mercedes Sosa y Spinetta, y fue padrino musical de Fito Páez y Andrés Calamaro.</li>
+        <li>A sus 73 años lanzó “El Escorpión”, generando una intensa Charlymanía.</li>
+        <li>Grabó 56 álbumes y produjo al menos a una docena de otros artistas.</li>
+      </ul>
+      <p class="mt-4 text-gray-700"><strong>Ver anexo:</strong> Discografía</p>
+    </section>
+
+    <!-- Curaduría -->
+    <section class="bg-white p-6 rounded-lg shadow mb-8">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Curaduría</h2>
+      <p class="text-gray-700">Los contenidos fueron seleccionados por Gabriel Grätzer y revisados por el Collegium Musicum de Buenos Aires, ofreciendo una visión detallada de la vida y obra de Charly García.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

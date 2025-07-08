@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMUA • Jaime Torres</title>
+
+  <!-- 1) Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2) Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- 3) Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- 4) Script de carga de parciales y menú -->
+  <script defer src="js/menu.js"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="flex-1 p-4 space-y-6">
+
+    <!-- Datos Personales -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Datos Personales</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li><strong>Nombre completo:</strong> Jaime Torres</li>
+        <li><strong>Fecha de nacimiento:</strong> 21 de septiembre de 1938</li>
+        <li><strong>Lugar de nacimiento:</strong> San Miguel de Tucumán, Tucumán</li>
+        <li><strong>Fecha de fallecimiento:</strong> 24 de diciembre de 2018</li>
+        <li><strong>Lugar de fallecimiento:</strong> Ciudad Autónoma de Buenos Aires</li>
+        <li><strong>Estilos musicales:</strong> Folclore · Andino · Carnavalito</li>
+      </ul>
+    </section>
+
+    <!-- Biografía breve -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-3">Biografía breve</h2>
+      <p class="text-gray-700">
+        Jaime Torres fue uno de los músicos folclóricos argentinos más destacados. Hijo de inmigrantes bolivianos, logró reconocimiento mundial por su destreza con el charango. Su arte lo llevó a recorrer el mundo de la mano de la <em>Misa Criolla</em> de Ariel Ramírez, considerada un ícono de la música argentina.
+      </p>
+      <a href="https://es.wikipedia.org/wiki/Jaime_Torres" target="_blank" class="text-yellow-600 underline mt-2 inline-block">Ver biografía completa</a>
+    </section>
+
+    <!-- Galería sin scrollbar -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Galería</h2>
+      <div class="overflow-x-auto snap-x snap-mandatory flex space-x-4 pb-4 no-scrollbar">
+        <img src="https://picsum.photos/seed/jaime1/300/200" alt="Jaime Torres 1" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/jaime2/300/200" alt="Jaime Torres 2" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/jaime3/300/200" alt="Jaime Torres 3" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+        <img src="https://picsum.photos/seed/jaime4/300/200" alt="Jaime Torres 4" class="w-64 h-40 object-cover rounded-lg snap-center"/>
+      </div>
+    </section>
+
+    <!-- Obras, Videos y Audios -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Obras, Videos y Audios</h2>
+      <hr class="border-gray-300 mb-4"/>
+      <ul class="list-none space-y-3 text-gray-800">
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=UVTebh8J0b8" target="_blank" class="hover:underline">Encuentro en el Estudio (Recitado)</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=M0TDZ5PJ5iE" target="_blank" class="hover:underline">Diablo suelto</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=SNlSQLA6N2o" target="_blank" class="hover:underline">Aires de Puno</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="h-5 w-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 8l6 4-6 4V8z"/></svg>
+          <a href="https://www.youtube.com/watch?v=Sy9MzwzZHgQ" target="_blank" class="hover:underline">Mundo Torres</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Puntos Geográficos Relevantes -->
+    <section class="bg-white p-6 rounded-lg shadow space-y-4">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Puntos Geográficos Relevantes</h2>
+      <hr class="border-blue-300 mb-4"/>
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-2 mb-1">
+            <svg class="h-5 w-5 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <h3 class="text-lg font-semibold text-blue-600">Estudio ION</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-1">Av. Hipólito Yrigoyen 2519, Balvanera</p>
+          <p class="text-gray-700 leading-relaxed mb-2">Estudio de grabación donde Jaime Torres realizó numerosas sesiones, clave en su carrera.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Hipólito+Yrigoyen+2519,+Balvanera" target="_blank" class="text-yellow-600 underline hover:text-yellow-700">Ver en Maps</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-2 mb-1">
+            <svg class="h-5 w-5 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <h3 class="text-lg font-semibold text-blue-600">Radio Nacional</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-1">Maipú 555, San Nicolás</p>
+          <p class="text-gray-700 leading-relaxed mb-2">Estudio de la emisora donde Jaime participó en múltiples programas de folclore.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Maipú+555,+San+Nicolás" target="_blank" class="text-yellow-600 underline hover:text-yellow-700">Ver en Maps</a>
+        </div>
+        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-2 mb-1">
+            <svg class="h-5 w-5 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7lm0 9.5a2.5 2.5"/></svg>
+            <h3 class="text-lg font-semibold text-blue-600">Vivienda San Telmo</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-1">Piedras 1947, San Telmo</p>
+          <p class="text-gray-700 leading-relaxed mb-2">Donde vivió Jaime Torres: hoy punto de encuentro de aficionados al charango.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Piedras+1947,+San+Telmo" target="_blank" class="text-yellow-600 underline hover:text-yellow-700">Ver en Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Síntesis histórica / anécdotas -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Síntesis histórica / anécdotas</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Apodado “El del Charango” por su virtuosismo.</li>
+        <li>Fundador de la Casa del Tantanakuy en Humahuaca.</li>
+        <li>Recibió el Premio Konex de Platino en 1995.</li>
+        <li>Declarado Ciudadano Ilustre de Buenos Aires en 2013.</li>
+        <li>Su casa conserva una escultura iluminada de Alejandro Marmo.</li>
+      </ul>
+    </section>
+
+    <!-- Observaciones -->
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-bold text-indigo-900 mb-4">Observaciones</h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Grabó más de 20 discos solistas entre 1964 y 2011.</li>
+        <li>Participó en las películas “Argentinísima” y “El Charanguero”.</li>
+        <li>Mantuvo estrecho vínculo con Ariel Ramírez, vecino de San Telmo.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+</body>
+</html>
