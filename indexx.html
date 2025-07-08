@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MMUA - Memoria de la Música del Alma</title>
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Menu script -->
   <script defer src="js/menu.js"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
 
+  <!-- Header -->
   <div id="site-header"></div>
 
   <main class="flex-1 flex flex-col">
-    <section class="relative overflow-hidden h-[450px] md:h-[750px] pb-28">
+    <!-- Hero Banner -->
+    <section class="relative overflow-hidden h-96 md:h-[700px] pb-28">
       <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1350&q=80"
            alt="Mapa de Buenos Aires superpuesto con notas musicales"
            class="w-full h-full object-cover brightness-75">
@@ -30,6 +36,7 @@
       </div>
     </section>
 
+    <!-- ¿Qué es MMUA? -->
     <section class="p-8 bg-white shadow-inner -mt-16 relative rounded-t-xl z-10">
       <div class="max-w-3xl mx-auto text-center">
         <h3 class="text-2xl md:text-3xl font-bold text-indigo-900 mb-4">¿Qué es MMUA?</h3>
@@ -43,6 +50,7 @@
       </div>
     </section>
 
+    <!-- Teaser Mapa Interactivo -->
     <section class="p-8 bg-gray-100">
       <div class="max-w-3xl mx-auto text-center">
         <div class="bg-gray-200 bg-opacity-50 p-6 rounded-lg shadow-lg">
@@ -55,6 +63,7 @@
 
   </main>
 
+  <!-- Footer -->
   <div id="site-footer"></div>
 
 </body>
